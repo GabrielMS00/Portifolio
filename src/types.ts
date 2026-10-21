@@ -54,8 +54,6 @@ export type Project = {
 
 export type Skill = {
   name: string
-  /** Nomes alternativos usados nas stacks dos projetos */
-  aliases?: string[]
 }
 
 export type SkillGroup = {

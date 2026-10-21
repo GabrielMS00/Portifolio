@@ -5,33 +5,35 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Linguagens',
     icon: CodeXml,
-    skills: [{ name: 'TypeScript' }, { name: 'Python' }, { name: 'SQL' }, { name: 'JavaScript' }],
+    skills: [{ name: 'JavaScript' }, { name: 'TypeScript' }, { name: 'Python' }, { name: 'SQL' }],
   },
   {
     title: 'Frameworks',
     icon: Layers,
     skills: [
       { name: 'React' },
-      { name: 'Next.js' },
       { name: 'React Native' },
+      { name: 'Next.js' },
+      { name: 'Vue.js' },
       { name: 'Expo' },
       { name: 'FastAPI' },
+      { name: 'Django' },
     ],
   },
   {
     title: 'Banco de Dados',
     icon: Database,
-    skills: [{ name: 'PostgreSQL' }, { name: 'Supabase', aliases: ['Supabase Auth'] }, { name: 'pgvector' }],
+    skills: [{ name: 'PostgreSQL' }, { name: 'Supabase' }, { name: 'pgvector' }],
   },
   {
     title: 'Infra & Ferramentas',
     icon: Server,
     skills: [
       { name: 'Docker' },
-      { name: 'GitHub Actions' },
       { name: 'Git' },
-      { name: 'Figma' },
+      { name: 'GitHub Actions' },
       { name: 'Claude Code' },
+      { name: 'Figma' },
     ],
   },
 ]
