@@ -4,7 +4,7 @@ export const profile: Profile = {
   name: 'Gabriel Souza',
   headline: 'Portifólio profissional',
   role: 'Engenheiro de Software',
-  summary: 'Apps mobile e web, do protótipo ao deploy, com foco em produto e IA.',
+  summary: 'Aplicações web e mobile do protótipo ao deploy, com visão de produto e agentes de IA.',
   availability: 'Aberto a oportunidades',
   focus: ['Arquitetura', 'Backend', 'IA aplicada'],
   baseStack: ['TypeScript', 'Python', 'PostgreSQL'],
