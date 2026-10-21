@@ -4,7 +4,6 @@
   border-block: 1px solid var(--border);
 }
 
-/* O espaçamento de 1px sobre o fundo da borda desenha as divisórias entre colunas */
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

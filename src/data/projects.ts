@@ -1,11 +1,6 @@
 import { ChartPie, ClipboardList, FolderTree, Braces, Layers, ShieldCheck, Smartphone } from 'lucide-react'
 import type { Project } from '../types'
 
-/*
- * Para adicionar as fotos: coloque os arquivos em public/projects/<id>/ e
- * preencha `image` (e `alt`) na tela correspondente. Enquanto `image` estiver
- * vazio, a página mostra o espaço reservado.
- */
 export const projects: Project[] = [
   {
     id: 'bora-onde',

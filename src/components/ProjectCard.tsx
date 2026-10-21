@@ -8,7 +8,6 @@ import './ProjectCard.css'
 type ProjectCardProps = {
   project: Project
   index: number
-  /** Inverte as colunas (informações à esquerda, galeria à direita) */
   reverse?: boolean
 }
 
