@@ -1,0 +1,26 @@
+.projects {
+  padding-block: 104px;
+}
+
+.projects__list {
+  display: grid;
+  gap: 56px;
+  margin-top: 56px;
+}
+
+@media (max-width: 960px) {
+  .projects {
+    padding-block: 72px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding-block: 56px;
+  }
+
+  .projects__list {
+    gap: 40px;
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,131 @@
+.hero {
+  padding-block: 112px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 384px;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.hero__title {
+  margin-top: 20px;
+  font-size: clamp(2.5rem, 1.1rem + 5.4vw, 4.6875rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.hero__name,
+.hero__accent {
+  display: block;
+}
+
+.hero__name {
+  color: var(--text);
+}
+
+.hero__accent {
+  color: var(--accent);
+}
+
+.hero__summary {
+  max-width: 40rem;
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.profile {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+.profile__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 36px;
+  padding-inline: 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.profile__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--violet);
+}
+
+.profile__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--violet);
+}
+
+.profile__row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  min-height: 49px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.profile__row:last-child {
+  border-bottom: 0;
+}
+
+.profile__value {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+@media (max-width: 960px) {
+  .hero {
+    padding-block: 72px;
+  }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-block: 56px;
+  }
+
+  .hero__summary {
+    font-size: 16px;
+  }
+
+  .profile__row {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+}

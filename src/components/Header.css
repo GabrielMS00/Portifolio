@@ -1,0 +1,36 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+
+.header__nav {
+  display: flex;
+  gap: 28px;
+}
+
+.header__link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.header__link:hover {
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .header__nav {
+    gap: 20px;
+  }
+}

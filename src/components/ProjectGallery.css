@@ -1,0 +1,355 @@
+.gallery {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+/* Janela que simula o app: barra de título, navegação e área da imagem */
+.viewer {
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.viewer__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  padding-inline: 12px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.viewer__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.viewer__dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2b3256;
+}
+
+.viewer__url {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 8px;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viewer__nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.viewer__btn {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  color: var(--text-2);
+  transition: color 0.15s ease;
+}
+
+.viewer__btn:hover {
+  color: var(--accent);
+}
+
+.viewer__count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Palco: celular à esquerda e ficha da tela à direita (a ficha some em larguras pequenas) */
+.viewer__stage {
+  container-type: inline-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: var(--stage-h);
+  padding: 16px;
+
+  --stage-h: 560px;
+  --bezel: 10px;
+  /* Faixa acima do print onde fica a ilha dinâmica, já que os prints não têm barra de status */
+  --status-h: 30px;
+  --screen-h: calc(var(--stage-h) - 32px - 2 * var(--bezel));
+}
+
+/* Moldura de iPhone: corpo escuro, ilha dinâmica e botões laterais.
+   A largura segue a proporção dos prints do projeto (--shot-ratio) para eles caberem inteiros. */
+.phone {
+  position: relative;
+  flex: none;
+  height: 100%;
+  width: calc((var(--screen-h) - var(--status-h)) * var(--shot-ratio, 0.462) + 2 * var(--bezel));
+  padding: var(--bezel);
+  background: #04050b;
+  border-radius: 42px;
+  box-shadow:
+    0 0 0 1px #3a4270,
+    inset 0 0 0 1px #1c2142,
+    0 28px 48px -20px rgba(0, 0, 0, 0.7);
+}
+
+.phone::before,
+.phone::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: #2a3158;
+  border-radius: 2px;
+}
+
+.phone::before {
+  left: -4px;
+  top: 22%;
+  height: 12%;
+}
+
+.phone::after {
+  right: -4px;
+  top: 26%;
+  height: 16%;
+}
+
+.phone__screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: var(--status-h);
+  overflow: hidden;
+  background: var(--surface);
+  border-radius: 32px;
+}
+
+.phone__island {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  z-index: 1;
+  width: 28%;
+  height: 18px;
+  background: #000;
+  border-radius: 999px;
+  transform: translateX(-50%);
+}
+
+.phone__image {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: top;
+}
+
+.phone__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 16px;
+  text-align: center;
+}
+
+.phone__empty-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  background: var(--accent-soft);
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+.phone__empty-title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.phone__empty-text {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.stage-info {
+  flex: none;
+  width: 200px;
+}
+
+.stage-info__title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.stage-info__rule {
+  display: block;
+  margin-block: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.stage-info__spec {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--dim);
+}
+
+@container (max-width: 500px) {
+  .stage-info {
+    display: none;
+  }
+}
+
+.thumbs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.thumb {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: border-color 0.15s ease;
+}
+
+.thumb:hover {
+  border-color: var(--dim);
+}
+
+.thumb[aria-pressed='true'] {
+  border-color: var(--accent);
+}
+
+.thumb__frame {
+  display: grid;
+  place-items: center;
+  height: 112px;
+  margin: 6px 6px 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  color: var(--dim);
+}
+
+.thumb[aria-pressed='true'] .thumb__frame {
+  color: var(--accent);
+}
+
+.thumb__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.thumb__label {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 8px 8px 9px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.thumb[aria-pressed='true'] .thumb__label {
+  color: var(--text);
+}
+
+.thumb__index {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--dim);
+}
+
+.thumb[aria-pressed='true'] .thumb__index {
+  color: var(--accent);
+}
+
+.caption {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.caption__fig {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.caption strong {
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 960px) {
+  .gallery {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .viewer__stage {
+    --stage-h: 460px;
+  }
+
+  .viewer__dots {
+    display: none;
+  }
+
+  /* Em telas estreitas as miniaturas viram uma faixa que rola na horizontal */
+  .thumbs {
+    display: flex;
+    padding-bottom: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .thumbs > li {
+    flex: 0 0 104px;
+    scroll-snap-align: start;
+  }
+
+  .thumb__frame {
+    height: 88px;
+  }
+
+  .thumb__label {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

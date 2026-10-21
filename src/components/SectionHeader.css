@@ -1,0 +1,66 @@
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--divider);
+}
+
+.section-header__slug {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.section-header__title {
+  margin-top: 8px;
+  font-size: clamp(2.25rem, 1.2rem + 3.9vw, 3.7rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.section-header__aside {
+  max-width: 26rem;
+  text-align: right;
+}
+
+.section-header__description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-2);
+}
+
+.section-counter {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.section-counter__value {
+  font-family: var(--font-mono);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .section-header__aside {
+    max-width: 34rem;
+    text-align: left;
+  }
+
+  .section-counter {
+    justify-content: flex-start;
+  }
+}
