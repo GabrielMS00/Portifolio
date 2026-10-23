@@ -1,4 +1,4 @@
-# Portfólio · Gabriel Souza
+# Portfólio Profissional
 
 Página web para organizar e apresentar o meu portfólio de engenheiro de software: perfil, projetos e competências.
 
