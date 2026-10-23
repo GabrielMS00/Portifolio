@@ -23,6 +23,9 @@ export function Hero() {
             <a className="btn btn--primary" href="#projetos">
               Ver projetos
             </a>
+            <a className="btn btn--ghost" href={profile.resume} target="_blank" rel="noreferrer noopener">
+              Currículo
+            </a>
             <a className="btn btn--ghost" href={profile.github} target="_blank" rel="noreferrer noopener">
               GitHub
             </a>

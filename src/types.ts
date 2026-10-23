@@ -12,6 +12,7 @@ export type Profile = {
   email: string
   github: string
   linkedin: string
+  resume: string
 }
 
 export type Screen = {

@@ -1,4 +1,4 @@
-import { ArrowUp, Mail } from 'lucide-react'
+import { ArrowUp, FileText, Mail } from 'lucide-react'
 import { profile } from '../data/profile'
 import { GithubIcon, LinkedinIcon } from './BrandIcons'
 import { Logo } from './Logo'
@@ -31,6 +31,12 @@ export function Footer() {
               <a className="footer__link" href={profile.linkedin} target="_blank" rel="noreferrer noopener">
                 <LinkedinIcon size={16} />
                 LinkedIn
+              </a>
+            </li>
+            <li>
+              <a className="footer__link" href={profile.resume} target="_blank" rel="noreferrer noopener">
+                <FileText size={16} aria-hidden="true" />
+                Currículo
               </a>
             </li>
           </ul>
