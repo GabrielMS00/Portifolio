@@ -12,4 +12,5 @@ export const profile: Profile = {
   email: 'gabriel.marquesdesouza.02@gmail.com',
   github: 'https://github.com/GabrielMS00',
   linkedin: 'https://www.linkedin.com/in/gabriel-souza-14920b254',
+  resume: 'https://drive.google.com/file/d/1YedC3SZT7P9x74uFBUDg6cp0tBXpLOCZ/view?usp=sharing',
 }
