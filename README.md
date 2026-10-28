@@ -18,7 +18,7 @@ Todo o conteúdo fica em `src/data`:
 | `projects.ts` | Projetos: descrição, características, stack, telas e links |
 | `skills.ts` | Competências por camada |
 
-A quantidade de projetos, a numeração (PRJ-01, FIG. 1.1) e os rótulos P01/P02 nas competências são calculados a partir desses arquivos. Para adicionar um projeto, inclua mais um item em `projects.ts`: o layout alterna sozinho entre galeria à esquerda e à direita.
+A quantidade de projetos e a numeração (PRJ-01, FIG. 1.1) são calculadas a partir desses arquivos. Para adicionar um projeto, inclua mais um item em `projects.ts`: o layout alterna sozinho entre galeria à esquerda e à direita.
 
 ## Imagens dos projetos
 

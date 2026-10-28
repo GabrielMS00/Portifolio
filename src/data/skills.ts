@@ -21,7 +21,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Banco de Dados',
     icon: Database,
-    skills: [{ name: 'PostgreSQL' }, { name: 'Supabase', aliases: ['Supabase Auth'] }, { name: 'pgvector' }],
+    skills: [{ name: 'PostgreSQL' }, { name: 'Supabase' }, { name: 'pgvector' }],
   },
   {
     title: 'Infra & Ferramentas',

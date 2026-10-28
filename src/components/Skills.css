@@ -53,25 +53,9 @@
 .skill {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   min-height: 42px;
   border-bottom: 1px solid var(--divider);
-}
-
-.skill__name {
   font-size: 15px;
-}
-
-.skill__projects {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: #7480c8;
-  white-space: nowrap;
-}
-
-.skill__projects[aria-label] {
-  color: var(--dim);
 }
 
 @media (max-width: 1024px) {
