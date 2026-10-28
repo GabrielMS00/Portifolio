@@ -1,4 +1,4 @@
-import { Contrast } from 'lucide-react'
+import { Contrast, Users } from 'lucide-react'
 import type { Project } from '../types'
 import { pad } from '../lib/format'
 import { GithubIcon } from './BrandIcons'
@@ -36,6 +36,12 @@ export function ProjectCard({ project, index, reverse = false }: ProjectCardProp
             <Contrast size={11} aria-hidden="true" />
             {project.status}
           </li>
+          {project.collaboration && (
+            <li className="chip">
+              <Users size={11} aria-hidden="true" />
+              {project.collaboration}
+            </li>
+          )}
         </ul>
 
         <p className="project__description">{project.description}</p>
@@ -74,12 +80,18 @@ export function ProjectCard({ project, index, reverse = false }: ProjectCardProp
         </dl>
 
         <div className="project__actions">
-          {project.repoUrl && (
-            <a className="btn btn--primary" href={project.repoUrl} target="_blank" rel="noreferrer noopener">
+          {project.repos?.map((repo) => (
+            <a
+              className="btn btn--primary"
+              href={repo.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              key={repo.url}
+            >
               <GithubIcon size={16} />
-              Ver repositório
+              {repo.label}
             </a>
-          )}
+          ))}
           {project.demoUrl && (
             <a className="btn btn--ghost" href={project.demoUrl} target="_blank" rel="noreferrer noopener">
               Ver demo

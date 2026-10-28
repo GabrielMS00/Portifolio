@@ -1,4 +1,15 @@
-import { ChartPie, ClipboardList, FolderTree, Braces, Layers, ShieldCheck, Smartphone } from 'lucide-react'
+import {
+  Braces,
+  ChartPie,
+  ClipboardList,
+  FolderTree,
+  Layers,
+  ScanText,
+  Server,
+  ShieldCheck,
+  Smartphone,
+  Users,
+} from 'lucide-react'
 import type { Project } from '../types'
 
 export const projects: Project[] = [
@@ -97,7 +108,109 @@ export const projects: Project[] = [
       },
     ],
     screenAspect: 1179 / 2556,
-    repoUrl: 'https://github.com/GabrielMS00/Bora-Onde',
+    repos: [{ label: 'Ver repositório', url: 'https://github.com/GabrielMS00/Bora-Onde' }],
+  },
+  {
+    id: 'koin',
+    name: 'Koin',
+    category: 'Mobile',
+    scope: 'Finanças em família',
+    year: '2026',
+    status: 'Em desenvolvimento',
+    collaboration: 'Projeto em equipe',
+    description:
+      'App de gestão financeira pessoal e em família que tira o trabalho de lançar gastos à mão: a pessoa envia a fatura do cartão ou um cupom, a IA lê os lançamentos e o app pede a revisão antes de salvar, avisando sobre possíveis duplicados. Cada pessoa alterna entre a própria visão e a da família, com gastos compartilhados e alertas de vencimento das faturas.',
+    features: [
+      {
+        icon: ScanText,
+        title: 'Faturas lidas por IA',
+        text: 'A API extrai os lançamentos de faturas e cupons com OCR e Gemini. No app, a pessoa revisa tudo antes de confirmar, com aviso de possíveis duplicados.',
+      },
+      {
+        icon: Users,
+        title: 'Finanças em família',
+        text: 'Membros, total compartilhado no mês e convites por e-mail com validade de 48 horas e escolha da permissão de cada pessoa.',
+      },
+      {
+        icon: ChartPie,
+        title: 'Resumo do mês',
+        text: 'Despesas, receitas e sobra, com os gastos por categoria. Pagamentos de fatura ficam fora do total para não contar duas vezes.',
+      },
+      {
+        icon: Server,
+        title: 'API própria com Docker',
+        text: 'FastAPI e PostgreSQL com login por JWT, migrações com Alembic, deploy com Docker Compose e Caddy e CI no GitHub Actions.',
+      },
+    ],
+    stack: [
+      { label: 'Mobile', items: ['TypeScript', 'React Native', 'Expo', 'Expo Router'] },
+      { label: 'Dados', items: ['TanStack Query', 'Zustand', 'Zod'] },
+      { label: 'Backend', items: ['Python', 'FastAPI', 'PostgreSQL', 'Docker'] },
+      { label: 'Infra', items: ['GitHub Actions', 'EAS Update'] },
+    ],
+    screens: [
+      {
+        title: 'Login',
+        caption: 'O acesso é por convite: entrada com e-mail e senha, recuperação de senha e atalho para quem recebeu um convite.',
+        image: '/projects/koin/01-login.webp',
+        statusColor: '#070511',
+        alt: 'Tela de login do Koin com campos de e-mail e senha e o botão "Tenho um convite"',
+      },
+      {
+        title: 'Início',
+        caption: 'Alertas de vencimento, despesas do mês e faturas dos cartões, com alternância entre visão pessoal e da família.',
+        image: '/projects/koin/02-inicio.webp',
+        statusColor: '#070511',
+        alt: 'Tela inicial do Koin com alertas de fatura, despesas de outubro e lista de cartões',
+      },
+      {
+        title: 'Resumo do mês',
+        caption: 'Despesas, receitas e sobra do mês, com a divisão dos gastos por categoria.',
+        image: '/projects/koin/03-resumo-do-mes.webp',
+        statusColor: '#070511',
+        alt: 'Tela de resumo do mês do Koin com totais de despesas e receitas e gastos por categoria',
+      },
+      {
+        title: 'Movimentações',
+        caption: 'Transações, parcelamentos e recorrentes, agrupados por dia e filtrados por mês.',
+        image: '/projects/koin/04-movimentacoes.webp',
+        statusColor: '#070511',
+        alt: 'Tela de movimentações do Koin com a lista de transações agrupadas por data',
+      },
+      {
+        title: 'Cartões',
+        caption: 'Cartões com fatura em aberto e limite disponível, e as contas com seus saldos.',
+        image: '/projects/koin/05-cartoes.webp',
+        statusColor: '#070511',
+        alt: 'Tela de contas e cartões do Koin com o cartão Nubank, a fatura atual e as contas',
+      },
+      {
+        title: 'Família',
+        caption: 'Membros do grupo, total compartilhado no mês e os lançamentos marcados com a tag Família.',
+        image: '/projects/koin/06-familia.webp',
+        statusColor: '#070511',
+        alt: 'Tela de família do Koin com a lista de membros e os lançamentos compartilhados',
+      },
+      {
+        title: 'Importação',
+        caption: 'Os lançamentos lidos da fatura são revisados antes de salvar, e nada é gravado sem confirmação.',
+        image: '/projects/koin/07-importar-fatura-revisao.webp',
+        statusColor: '#070511',
+        alt: 'Tela de revisão de lançamentos do Koin após importar uma fatura, com itens pendentes e possível duplicado',
+      },
+      {
+        title: 'Convite',
+        caption: 'Convite por e-mail com a permissão da pessoa convidada e validade de 48 horas.',
+        image: '/projects/koin/08-convidar-familiar.webp',
+        statusColor: '#070511',
+        alt: 'Tela de convite do Koin para adicionar uma pessoa à família, com as opções de permissão',
+      },
+    ],
+    screenAspect: 1179 / 2556,
+    repos: [
+      { label: 'Repositório Frontend', url: 'https://github.com/AppFinanceiro-GECS/koin-app' },
+      { label: 'Repositório Backend', url: 'https://github.com/AppFinanceiro-GECS/koin-api' },
+    ],
   },
   {
     id: 'go-finances',
@@ -167,6 +280,6 @@ export const projects: Project[] = [
       },
     ],
     screenAspect: 770 / 1600,
-    repoUrl: 'https://github.com/GabrielMS00/Go-Finances',
+    repos: [{ label: 'Ver repositório', url: 'https://github.com/GabrielMS00/Go-Finances' }],
   },
 ]

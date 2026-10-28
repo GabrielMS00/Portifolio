@@ -34,6 +34,12 @@ export type StackGroup = {
   items: string[]
 }
 
+export type RepoLink = {
+  /** Texto do botão */
+  label: string
+  url: string
+}
+
 export type Project = {
   id: string
   name: string
@@ -41,12 +47,15 @@ export type Project = {
   scope: string
   year: string
   status: string
+  /** Para projetos feitos em equipe: aparece como selo ao lado do ano e do status */
+  collaboration?: string
   description: string
   features: Feature[]
   stack: StackGroup[]
   screens: Screen[]
   screenAspect?: number
-  repoUrl?: string
+  /** Um botão por repositório (ex.: frontend e backend separados) */
+  repos?: RepoLink[]
   demoUrl?: string
 }
 

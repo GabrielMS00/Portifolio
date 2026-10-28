@@ -52,13 +52,8 @@
 .skill {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   min-height: 42px;
   border-bottom: 1px solid var(--divider);
-}
-
-.skill__name {
   font-size: 15px;
 }
 
