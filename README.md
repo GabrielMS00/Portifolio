@@ -1,6 +1,8 @@
-# Portfólio · Gabriel Souza
+# Portfólio Profissional
 
-Landing page em React + TypeScript + Vite.
+Página web para organizar e apresentar o meu portfólio de engenheiro de software: perfil, projetos e competências.
+
+Feita com React, TypeScript e Vite.
 
 ```bash
 npm install
@@ -37,10 +39,5 @@ Para trocar ou adicionar uma tela:
   image: '/projects/bora-onde/09-configuracoes.webp',
   alt: 'Tela de configurações do Bora Onde',
 }
+npm run build    # build de produção em dist/
 ```
-
-Sem `image`, a página mostra um espaço reservado (390 × 844 px).
-
-## Demo
-
-Quando um projeto tiver demo publicada, defina `demoUrl` em `projects.ts`: o botão "Ver demo" aparece ao lado de "Ver repositório". Sem `demoUrl`, só o botão do repositório é exibido.

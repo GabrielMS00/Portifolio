@@ -2,7 +2,6 @@ import type { SVGProps } from 'react'
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number }
 
-// O lucide-react v1 não inclui ícones de marca, então estes dois seguem o mesmo traço.
 function BaseIcon({ size = 16, children, ...props }: IconProps) {
   return (
     <svg

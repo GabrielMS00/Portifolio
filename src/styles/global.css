@@ -102,7 +102,6 @@ img {
   margin-inline: auto;
 }
 
-/* Rótulo pequeno em mono, usado em metadados e subtítulos de bloco */
 .label {
   font-family: var(--font-mono);
   font-size: 11px;

@@ -8,7 +8,6 @@ const SCREEN_SPEC = '390 × 844 px · iOS / Android'
 
 type ProjectGalleryProps = {
   project: Project
-  /** Posição do projeto na lista, começando em 0. Usada na numeração das figuras. */
   order: number
 }
 
@@ -18,7 +17,6 @@ export function ProjectGallery({ project, order }: ProjectGalleryProps) {
   const current = screens[active]
   const go = (step: number) => setActive((i) => (i + step + screens.length) % screens.length)
 
-  // Em telas estreitas as miniaturas rolam na horizontal: mantém a ativa visível ao usar as setas
   const thumbsRef = useRef<HTMLUListElement>(null)
   const firstRender = useRef(true)
   useEffect(() => {

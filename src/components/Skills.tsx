@@ -12,6 +12,7 @@ export function Skills() {
           title="Competências"
           titleId="competencias-title"
           description="Ferramentas e tecnologias que uso, agrupadas por camada."
+          description="Ferramentas e tecnologias agrupadas por camada."
         />
 
         <div className="skills__grid">
@@ -29,6 +30,7 @@ export function Skills() {
                 {skills.map((skill) => (
                   <li className="skill" key={skill.name}>
                     {skill.name}
+                    <span className="skill__name">{skill.name}</span>
                   </li>
                 ))}
               </ul>

@@ -3,7 +3,6 @@
   top: calc(var(--header-h) + 24px);
 }
 
-/* Janela que simula o app: barra de título, navegação e área da imagem */
 .viewer {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -70,7 +69,6 @@
   color: var(--muted);
 }
 
-/* Palco: celular à esquerda e ficha da tela à direita (a ficha some em larguras pequenas) */
 .viewer__stage {
   container-type: inline-size;
   display: flex;
@@ -82,13 +80,10 @@
 
   --stage-h: 560px;
   --bezel: 10px;
-  /* Faixa acima do print onde fica a ilha dinâmica, já que os prints não têm barra de status */
   --status-h: 30px;
   --screen-h: calc(var(--stage-h) - 32px - 2 * var(--bezel));
 }
 
-/* Moldura de iPhone: corpo escuro, ilha dinâmica e botões laterais.
-   A largura segue a proporção dos prints do projeto (--shot-ratio) para eles caberem inteiros. */
 .phone {
   position: relative;
   flex: none;
@@ -329,7 +324,6 @@
     display: none;
   }
 
-  /* Em telas estreitas as miniaturas viram uma faixa que rola na horizontal */
   .thumbs {
     display: flex;
     padding-bottom: 6px;

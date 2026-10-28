@@ -18,10 +18,8 @@ export type Profile = {
 export type Screen = {
   title: string
   caption: string
-  /** Caminho da imagem a partir de /public, ex.: '/projects/bora-onde/01-login.webp' */
   image?: string
   alt?: string
-  /** Cor do topo do print, usada na faixa da barra de status do celular */
   statusColor?: string
 }
 
@@ -55,7 +53,6 @@ export type Project = {
   features: Feature[]
   stack: StackGroup[]
   screens: Screen[]
-  /** Largura ÷ altura dos prints do projeto; define a proporção da tela do celular */
   screenAspect?: number
   /** Um botão por repositório (ex.: frontend e backend separados) */
   repos?: RepoLink[]
